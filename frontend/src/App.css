@@ -1,0 +1,28 @@
+/* Ensure full-screen layout */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent unnecessary scrollbars */
+}
+
+/* Flexbox for main layout */
+.app-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Sidebar takes fixed width, content expands */
+.sidebar {
+  width: 250px;
+  background-color: #111827; /* Dark sidebar */
+  height: 100%;
+}
+
+.main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  background: #1F2937; /* Dark mode background */
+  padding: 20px;
+  color: white;
+}
