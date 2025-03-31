@@ -31,7 +31,7 @@ const Sidebar = ({ isOpen, darkMode }) => {
           }`}
         >
           <MessageSquare size={20} />
-          <span>Feedback Form</span>
+          <span>Scan & Extract</span>
         </Link>
       </nav>
 

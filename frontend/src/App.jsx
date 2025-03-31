@@ -5,6 +5,8 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import FeedbackForm from "./pages/FeedbackForm";
 import NotFound from "./pages/NotFound";
+import FeedbackList from "./components/FeedbackList";
+
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,16 +32,17 @@ const App = () => {
           darkMode={darkMode}
           setDarkMode={setDarkMode}
         />
-        <div className="flex overflow-hidden ">
-          <Sidebar isOpen={isOpen} darkMode={darkMode} />
-          <main className="ml-64 p-6 w-screen min-h-screen overflow-hidden">
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/feedback" element={<FeedbackForm darkMode={darkMode} />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-        </div>
+        <div className="flex h-screen overflow-hidden">
+  <Sidebar isOpen={isOpen} darkMode={darkMode} />
+  <main className="ml-64 p-6 w-screen h-screen overflow-y-auto scrollbar-hide pb-24">
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/feedback" element={<FeedbackForm darkMode={darkMode} />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </main>
+</div>
+
       </div>
     </Router>
   );

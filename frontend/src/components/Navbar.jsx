@@ -14,7 +14,7 @@ const Navbar = ({ toggleSidebar, darkMode, setDarkMode }) => {
       </button>
 
       {/* Title */}
-      <h1 className="text-lg font-bold tracking-wider">📘 Student Feedback</h1>
+      <h1 className="text-lg font-bold tracking-wider">📘Feedback</h1>
 
       {/* Theme Toggle Button with Spacing */}
       <button
